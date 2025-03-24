@@ -59,56 +59,7 @@ fetch(base_url)
     .catch(err => console.log(err));
 
 
-    let div =document.getElementById("character-form" )
-    form.addEventListener( "submit ",addNewCharacter)
-    function addNewCharacter (event) {
-     event.preventDefault( )
-     let names = document.getElementById("name ")
-     let images = document.getElementById (" image-url " )
-     let newCharacters = {
-          
-     }
-
-}
-
-//     let form = document.getElementById('form')
-//     form.addEventListener('submit', handleSubmit)
-// function handleSubmit(event){
-//     event.preventDefault()
-//         let product_title = document.getElementById('title').value
-//         let product_image = document.getElementById('image').value
-//         let product_price = document.getElementById('price').value
-//         let product_description = document.getElementById('description').value
-//         let product_category = document.getElementById('category').value
-
-//         let product_object = {
-//             title: product_title,
-//             image: product_image,
-//             price: product_price,
-//             description: product_description,
-//             category: product_category
-//         }
-
-//         postProduct(product_object)
-// }
-
-//     function postProduct(product_object){
-//         fetch(base_url,{
-//             method: "POST",
-//             headers : {
-//                 "Content-Type": "application/json"
-//             },
-//             body: JSON.stringify(product_object)
-//         })
-//         .then(res => res.json())
-//         .then(data => console.log(data))
-//         .catch(err => console.log(err))
-//     }
-
-
-
-
-
+    
 
 
 
