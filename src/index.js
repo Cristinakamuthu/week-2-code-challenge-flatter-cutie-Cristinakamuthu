@@ -46,7 +46,7 @@ form.addEventListener("submit", (event) => {
         voteCount.textContent = addedVotes; 
     }
     //PATCH method to patch the votes
-    fetch(`${base_url}/${characters.id}`, {
+    fetch(`${base_url}/${id}`, {
         method: "PATCH",
         headers: {
             "Content-Type": "application/json"
@@ -54,7 +54,7 @@ form.addEventListener("submit", (event) => {
         body: JSON.stringify({ votes: addedVotes }) 
     })
     .then(res => res.json())
-        .then(() => console.log("addedVotes"))
+        .then(data => console.log("addedVotes"))
         .catch(err => console.log(err))
     }
 );
