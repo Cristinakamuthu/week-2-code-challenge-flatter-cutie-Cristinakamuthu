@@ -1,3 +1,5 @@
+// let base_url = "http://localhost:3000/characters"
+
 let base_url = "https://mimi-cutie-7719.vercel.app/characters"
 
 // Creating a span tag in the div#character-bar
