@@ -45,10 +45,19 @@ form.addEventListener("submit", (event) => {
         let addedVotes = initialVotes + newVotes;
         voteCount.textContent = addedVotes; 
     }
-
-    form.reset(); 
-});
-
+    //PATCH method to patch the votes
+    fetch(`${base_url}/${characters.id}`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ votes: addedVotes }) 
+    })
+    .then(res => res.json())
+        .then(() => console.log("addedVotes"))
+        .catch(err => console.log(err))
+    }
+);
 
 const btn = document.getElementById("reset-btn");
 btn.addEventListener("click", () => {
@@ -59,6 +68,8 @@ fetch(base_url)
     .then(res => res.json()) // Convert response to JSON
     .then(data => displayNames(data)) // Call displayNames with data
     .catch(err => console.log(err));
+
+  
 
 
     
